@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Education</title>
-    <link rel="stylesheet" href="asset/style/main.css" />
+
+    <!-- ========== google icon ========== -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.js"
-      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-      crossorigin="anonymous"
-    ></script>
+    <!-- ========== Owl Carousel ========== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="asset/style/main.css" />
   </head>
   <body>
     <!-- Header Star -->
@@ -23,7 +29,7 @@
         <!-- Logo -->
         <div class="logo">
           <a href="#home">
-            <img src="/asset/image/Group 120.svg" alt="Logo" />
+            <img src="/asset/image/icon/logo/logo.svg" alt="Logo" />
           </a>
         </div>
 
@@ -55,7 +61,7 @@
       <!-- Navigation End -->
       <div class="background__video">
         <video id="background-video" autoplay loop muted poster="">
-          <source src="/asset/image/vidio2.mp4" type="video/mp4" />
+          <source src="/asset/image/vidio.mp4" type="video/mp4" />
         </video>
 
         <!-- Hero content Star -->
@@ -77,7 +83,7 @@
       <!-- Section About Star -->
       <section class="section__about container" id="about">
         <div class="about__img">
-          <img src="/asset/image/Rectangle 31.jpg" alt="Image" />
+          <img src="/asset/image//profil/Rectangle 31.jpg" alt="Image" />
         </div>
         <div class="about__description">
           <h2 class="heading">Education</h2>
@@ -195,7 +201,7 @@
         <div class="features__content">
           <!-- 1 -->
           <div class="featur__card">
-            <img src="/asset/image/img_1.jpg" alt="image" />
+            <img src="/asset/image/profil/img_1.jpg" alt="image" />
             <div class="content__card">
               <div class="description">
                 <h3>Web Design</h3>
@@ -213,7 +219,7 @@
           </div>
           <!-- 2 -->
           <div class="featur__card">
-            <img src="/asset/image/img_2.jpg" alt="image" />
+            <img src="/asset/image/profil/img_2.jpg" alt="image" />
             <div class="content__card">
               <div class="description">
                 <h3>Photography</h3>
@@ -231,7 +237,7 @@
           </div>
           <!-- 3 -->
           <div class="featur__card">
-            <img src="/asset/image/img_3.jpg" alt="image" />
+            <img src="/asset/image/profil/img_3.jpg" alt="image" />
             <div class="content__card">
               <div class="description">
                 <h3>Digital Marketing</h3>
@@ -252,23 +258,98 @@
       <!-- Section Courses End -->
       <!-- Section Client Star -->
       <section class="section__client" id="client">
-        <h2 class="heading">What client say</h2>
-        <div class="client__profil">
-          <img src="/asset/image/client_1.png" alt="image_profil" />
-          <img src="/asset/image/client_2.png" alt="image_profil" />
-          <img src="/asset/image/client_3.png" alt="image_profil" />
-          <img src="/asset/image/client_4.png" alt="image_profil" />
-          <img src="/asset/image/client_5.png" alt="image_profil" />
-        </div>
-        <div class="client__description">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip excas.
-          </p>
+        <div class="container">
+          <h2 class="heading">What client say</h2>
+          <div class="owl-carousel owl-theme .content__client client">
+            <!-- 1 -->
+            <div class="item">
+              <div class="image">
+                <img
+                  src="/asset/image/profil/client_1.png"
+                  alt="image_profil"
+                />
+              </div>
+              <div class="content">
+                <q
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip excas.</q
+                >
+              </div>
+              <div class="info">
+                <h3>John Doe</h3>
+                <p>CEO Smart Edu</p>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="item">
+              <div class="image">
+                <img
+                  src="/asset/image/profil/client_2.png"
+                  alt="image_profil"
+                />
+              </div>
+              <div class="content">
+                <q
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip excas.</q
+                >
+              </div>
+              <div class="info">
+                <h4>Arlene Anello</h4>
+                <p>SEO Head</p>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="item">
+              <div class="image">
+                <img
+                  src="/asset/image/profil/client_3.png"
+                  alt="image_profil"
+                />
+              </div>
+              <div class="content">
+                <q
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip excas.</q
+                >
+              </div>
+              <div class="info">
+                <h4>Reed Recio</h4>
+                <p>CEO Marketing</p>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="item">
+              <div class="image">
+                <img
+                  src="/asset/image/profil/client_4.png"
+                  alt="image_profil"
+                />
+              </div>
+              <div class="content">
+                <q
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip excas.</q
+                >
+              </div>
+              <div class="info">
+                <h4>Burton Brooke</h4>
+                <p>CEO Smart Edu</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      <!-- test2 end -->
       <!-- Section Client End -->
       <!-- Section Subscribe Star -->
       <section class="section__subscribe">
@@ -283,34 +364,53 @@
     <footer id="footer">
       <div class="link container">
         <div class="logo">
-          <img src="/asset/image/Group 123.svg" alt="logo" />
+          <img src="/asset/image/icon/logo/logo__footer.svg" alt="logo" />
         </div>
-        <div class="item__commuinity">
-          <h3>Commuinity</h3>
-          <ul>
-            <li>Create Account</li>
-            <li>Go to Premium</li>
-            <li>Prefer A Friend</li>
-            <li>Get Coupon Code</li>
-          </ul>
-        </div>
-        <div class="item__commuinity">
-          <h3>Commuinity</h3>
-          <ul>
-            <li>Create Account</li>
-            <li>Go to Premium</li>
-            <li>Prefer A Friend</li>
-            <li>Get Coupon Code</li>
-          </ul>
-        </div>
-        <div class="item__commuinity">
-          <h3>Commuinity</h3>
-          <ul>
-            <li>Create Account</li>
-            <li>Go to Premium</li>
-            <li>Prefer A Friend</li>
-            <li>Get Coupon Code</li>
-          </ul>
+        <div class="community">
+          <div class="item">
+            <h3>Commuinity</h3>
+            <ul>
+              <li>Create Account</li>
+              <li>Go to Premium</li>
+              <li>Prefer A Friend</li>
+              <li>Get Coupon Code</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>Support</h3>
+            <ul>
+              <li>Terms Condition</li>
+              <li>Privacy & Policy</li>
+              <li>Copyright Issue</li>
+              <li>Get Help</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>Join Us</h3>
+            <ul>
+              <li>Become Teacher</li>
+              <li>Become Student</li>
+              <li>Become Both</li>
+              <li>Partnership</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>Contact</h3>
+            <ul>
+              <li>
+                <p>
+                  <span class="fa fa-map-marker"></span>LSE Houghton Street
+                  London
+                </p>
+              </li>
+              <li>
+                <p><span class="fa fa-envelope"></span>hello@gmail.com</p>
+              </li>
+              <li>
+                <p><span class="fa fa-phone"></span>+44(20) 74057686</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="copyright">
@@ -318,6 +418,12 @@
       </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- ========== jQuery ========== -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <!-- ========== Owl Carousel ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- ========== Javascript Costume ========== -->
     <script src="/asset/js/main.js"></script>
   </body>
 </html>

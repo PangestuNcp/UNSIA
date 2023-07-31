@@ -52,7 +52,12 @@ nav {
   top: 0;
   right: 0;
   left: 0;
+  transition: 0.5s ease;
+  z-index: 1000000;
+}
+nav.scrolled {
   background-color: #1a1a1af5;
+  transition: 0.5s ease;
 }
 nav .logo {
   width: 120px;
@@ -69,15 +74,33 @@ nav ul li a {
   text-decoration: none;
   margin: 1em;
   font-size: 14px;
-  /* font-weight: 400; */
   color: #ffffff;
+  position: relative;
 }
 nav ul li a.active {
   color: #27ad60;
   font-weight: 700;
 }
-nav ul li a:hover {
-  border-bottom: 2px solid #27ad60;
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  background: #27ad60;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+nav ul li a:hover::after {
+  content: "";
+  position: absolute;
+  background: #27ad60;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  border-radius: 10px;
 }
 /* Hamberger */
 .hamberger {
@@ -115,6 +138,10 @@ header .header__content button {
   color: #fff;
   background-color: #27ad60;
 }
+header .header__content button:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
 /* ==================== Hero End ==================== */
 
 /* Main */
@@ -143,6 +170,10 @@ section .heading {
 .section__about .about__img img {
   max-width: 100%;
 }
+.section__about .about__img img:hover {
+  transition: 0.3s ease;
+  transform: scale(1.1);
+}
 /* description */
 .section__about .about__description {
   max-width: 500px;
@@ -166,6 +197,11 @@ section .heading {
   width: 35px;
   margin-right: 1em;
 }
+.section__about .about__description .item .col img:hover {
+  transition: 0.3s ease;
+  transform: scale(1.1);
+}
+
 /* ==================== Section About End ====================  */
 /* ==================== Section features Star ==================== */
 .section__features {
@@ -186,6 +222,10 @@ section .heading {
 }
 .section__features .features__content .item__image img {
   max-width: 100%;
+}
+.section__features .features__content .item__image img:hover {
+  transition: 0.3s ease;
+  transform: scale(1.1);
 }
 .section__features .features__content .item__description p {
   font-family: "Montserrat", sans-serif;
@@ -214,6 +254,10 @@ section .heading {
 .section__courses .features__content .featur__card img {
   width: 100%;
 }
+.section__courses .features__content .featur__card img:hover {
+  transition: 0.3s ease-in;
+  transform: scale(1.1);
+}
 .section__courses .features__content .featur__card .content__card {
   padding: 0.8em 2em 1.5em;
 }
@@ -235,26 +279,39 @@ section .heading {
   color: #fff;
   font-weight: 700;
 }
+.section__courses .features__content .featur__card button:hover {
+  transition: 0.3s ease;
+  transform: scale(1.1);
+}
 /* ==================== Section Courses End ====================*/
 /* ==================== Section Testimonial Star ====================*/
 .section__client {
   text-align: center;
   background-color: #f1f1f1;
 }
-.section__client .client__profil {
-  padding: 2em 0 3em;
+.section__client h2 {
+  padding-bottom: 1.5em;
 }
-.section__client .client__profil img {
-  margin: 0 1.5em;
-  width: 100px;
+.section__client .item {
+  width: 600px;
+  margin: auto;
 }
-.section__client .client__profil img:nth-child(3) {
-  width: 110px;
+.section__client .item .image {
+  max-width: 110px;
+  margin: 0 auto 2em;
 }
-.section__client .client__description {
-  max-width: 35%;
-  margin: 1em auto;
-  font-family: "Montserrat", sans-serif;
+.section__client .item img {
+  width: 100%;
+}
+.section__client .item .content {
+  width: 80%;
+  margin: 0 auto 1em;
+}
+.section__client .item .info {
+  text-align: center;
+}
+.section__client .item .info h3 {
+  margin: 0.5em 0;
 }
 /* ==================== Section Testimonial End ==================== */
 /* ==================== Section Subscribe Star ==================== */
@@ -277,23 +334,43 @@ section .heading {
   color: #fff;
   background-color: #27ad60;
 }
+.section__subscribe button:hover {
+  transition: 0.3s ease;
+  transform: scale(1.1);
+}
 /* ==================== Section Subscribe End ==================== */
 /* ==================== Footer Star ==================== */
 footer {
   padding: 8em 0 0.6em;
   background-color: #f1f1f1;
 }
+footer .logo img {
+  max-width: 70%;
+}
 footer .link {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2.5em;
 }
-footer .link ul {
+footer .link .community {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2em;
+}
+footer .link .community .item {
+  margin: 0 2em;
+}
+footer .link .community ul {
   list-style: none;
   margin: 1em 0;
 }
-footer .link ul li {
+footer .link .community ul li {
   margin: 0.5em 0;
+}
+footer .link .community ul li span {
+  margin-right: 0.5em;
+  font-size: 1em;
+  text-align: center;
 }
 footer .copyright {
   text-align: center;
@@ -302,7 +379,7 @@ footer .copyright {
 }
 /* ==================== Footer End ==================== */
 
-/* ==================== Responsif ==================== */
+/* ==================== Responsif Star ==================== */
 @media screen and (max-width: 1010px) {
   .container {
     max-width: 800px;
@@ -311,14 +388,8 @@ footer .copyright {
     padding: 1.5em 5em;
   }
 
-  footer .link {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 800px;
-    text-align: center;
-  }
-  footer .link .item__commuinity {
-    margin-bottom: 1em;
+  footer .link .logo {
+    display: none;
   }
 }
 @media screen and (max-width: 900px) {
@@ -378,20 +449,21 @@ footer .copyright {
     overflow: hidden;
     background-color: #f1f1f1;
   }
-  footer .link {
+  footer .link .community {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 500px;
+    margin: auto;
     text-align: center;
   }
-  footer .link .item__commuinity {
-    margin-bottom: 1em;
+  footer .link .community .item {
+    margin-bottom: 2em;
   }
 }
-
 @media screen and (max-width: 730px) {
   nav {
     padding: 1.5em 8em;
+    background-color: #1a1a1af5;
   }
   nav ul {
     position: fixed;
@@ -454,32 +526,6 @@ footer .copyright {
   .section__features .features__content .item__description p {
     width: 90%;
   }
-
-  /*  */
-  .section__client .client__profil {
-    padding: 1em 0 2em;
-  }
-  .section__client .client__profil img {
-    margin: 0 1.5em;
-    width: 100px;
-  }
-  .section__client .client__profil img:nth-child(3) {
-    width: 110px;
-  }
-  .section__client .client__profil img:nth-child(1),
-  .section__client .client__profil img:nth-child(6),
-  .section__client .client__profil img:nth-child(5) {
-    display: none;
-  }
-  .section__client .client__description {
-    max-width: 80%;
-  }
-
-  footer .link {
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 2.5em;
-  }
 }
 @media screen and (max-width: 540px) {
   .container {
@@ -539,9 +585,8 @@ footer .copyright {
   .section__client {
     padding: 2em 0;
   }
-  .section__client .client__profil img:nth-child(2),
-  .section__client .client__profil img:nth-child(4) {
-    display: none;
+  .section__client .item {
+    width: 100%;
   }
 
   /*  */
@@ -557,12 +602,22 @@ footer .copyright {
     padding: 2em 0;
   }
   footer .link {
+    flex-direction: column;
+  }
+  footer .link .logo {
+    display: block;
+    width: 60%;
+    margin: 1em auto 2em;
+    text-align: center;
+  }
+
+  footer .link .community {
     grid-template-columns: 1fr;
     max-width: 100%;
   }
-  footer .link .item__commuinity {
-    margin: 1em 0;
+  footer .link .community .item:last-child {
+    margin-bottom: 0;
   }
 }
-
+/* ==================== Responsif End ==================== */
 /* Video by Pavel Danilyuk: https://www.pexels.com/video/teaching-a-kid-at-home-5183314/ */
