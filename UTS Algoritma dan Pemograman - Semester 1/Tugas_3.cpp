@@ -67,7 +67,7 @@ int main(){
 
         // Menampilkan Total Harga
         total = harga * jumlah;
-        cout << "\narga Yang Harus dibayar Sebesar Rp" << formatAngka(total) << endl;
+        cout << "\nHarga Yang Harus dibayar Sebesar Rp" << formatAngka(total) << endl;
         
         cout << "\nIngin hitung transaksi lainnya (Y/N) ? ";
         cin >> ulang;
