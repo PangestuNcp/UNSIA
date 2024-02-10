@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+// Nama 		: Pangestu Nur Cahyo Putro
+// NIM		    : 220401010161
+// kelas       : IT-102
+// Mata Kuliah	: Algoritma dan Pemrograman
+
 // ==================================================================
 // Untuk mengkonveksi menjadi nilai rupiah / menambahkan . "titik" 
 string formatAngka(int angka, string perantara = "."){
